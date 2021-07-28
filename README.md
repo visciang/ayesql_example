@@ -1,6 +1,6 @@
 # ayesql example
 
-No ecto, just postgrex
+No ecto, just postgrex, alias **parla come mangi**
 
     $ docker run --rm -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:alpine
 
