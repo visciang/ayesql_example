@@ -5,9 +5,7 @@ defmodule Example do
   @db_conn :db
 
   def start(_type, _args) do
-    postgrex_conf =
-      Application.get_env(:example, :db)
-      |> Keyword.put(:name, @db_conn)
+    postgrex_conf = Application.fetch_env!(:example, :db) |> Keyword.put(:name, @db_conn)
 
     children = [{Postgrex, postgrex_conf}]
 
